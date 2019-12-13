@@ -6,6 +6,5 @@ function addJavascript(jsname) {
 	th.appendChild(s);
 }
 
-addJavascript('celender3.js');
-addJavascript('datePick.js');
+addJavascript('calender.js');
 addJavascript('todoList.js');

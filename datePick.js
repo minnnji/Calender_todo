@@ -15,7 +15,7 @@ picked.addEventListener('click', function (ev) {
         ev.path[0].style.backgroundColor = "skyblue";
     
         var pickedCell = new Date(today.getFullYear() + "." + (today.getMonth()+1) + "." + ev.target.innerText);
-        day1.innerText = pickedCell.getFullYear() + "년 " + (pickedCell.getMonth()+1) + "월 " + pickedCell.getDate() + "일 " + day1_ko[pickedCell.getDay()];
-        pickedDate = pickedCell;
+        var pickedCellString = day1.innerText = pickedCell.getFullYear() + "년 " + (pickedCell.getMonth()+1) + "월 " + pickedCell.getDate() + "일 " + day1_ko[pickedCell.getDay()];
+        pickedDate = pickedCellString;
     }
 });

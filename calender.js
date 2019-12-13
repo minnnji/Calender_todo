@@ -5,6 +5,7 @@ var lastDay = new Date(today.getFullYear(), today.getMonth()+1, 0);
 var days = [];
 
 var calendarYM = document.getElementById('calendarYM');
+var td = document.querySelectorAll('td');
 
 //테이블 그리기
 var table = document.getElementById('table');
@@ -25,10 +26,12 @@ function calendar() {
     console.log(firstday);
     console.log(lastDay);
 
-    //한달치 날짜 배열에 넣기
-    for (var i = 1; i < lastDay.getDate()+1; i++) {
-        days.push(today.getFullYear() + "." + today.getMonth() + "." + i);
-    }
+    // var count = 1;
+    // for (var i = firstday.getDay(); i < lastDay.getDate(); i++) {
+    //     td[i].textContent = count;
+    //     count++;
+    // };
+
     //1일 전까지 빈 셀 생성
     var row = table.insertRow();
     for (var i = 1; i < firstday.getDay()+1; i++) {
@@ -45,7 +48,12 @@ function calendar() {
         }
     }
     rowlen = table.rows.length;
-}
+    };
+
+    //한달치 날짜 배열에 넣기
+    for (var i = 1; i < lastDay.getDate()+1; i++) {
+        days.push(today.getFullYear() + "." + today.getMonth() + "." + i);
+    };
 
 //이전 달
 function prevMM() {
